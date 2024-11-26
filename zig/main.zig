@@ -1,18 +1,18 @@
 const std = @import("std");
 const net = std.net;
-const StreamServer = net.StreamServer;
-const Address = net.Address;
-pub const io_mode = .evented;
 
-pub fn main() anyerror!void {
-  var stream_server = StreamServer.init(.{});
-  defer stream_server.close();
-  const address = try Address.resolveIp("127.0.0.1", 3000);
-  try stream_server.listen(address);
-  while (true) {
-    const client = try stream_server.accept();
-      const response = "HTTP/1.1 200 OK\r\n\r\n<h1>Hello World</h1>";
-      // try client.write(response);
-      try client.writeAll(response);
+pub fn main() void {
+    var allocator = std.heap.page_allocator;
+    const listener = try net.StreamServer.listen(.{}, "127.0.0.1", 3000);
+    defer listener.close();
+
+    // クライアントからの接続を待機し、受け入れる
+    while (true) {
+        const stream = try listener.accept();
+        defer stream.close();
+
+        // リクエストの読み込みやレスポンス処理を行う
+        const response = "HTTP/1.1 200 OK\r\nContent-Length: 13\r\n\r\nHello, Zig!";
+        try stream.writeAll(response);
     }
 }
