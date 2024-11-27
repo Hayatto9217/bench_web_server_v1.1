@@ -3,6 +3,10 @@
 ## Intro
 
 Zig のOS自作中にふと気がついたのですが,Webでベンチマークするとどれぐらいの比較があるのか確認したくなりました。
+*ZigのVersionが変更されたことによって、標準ライブラリーが削除されているという...(先月修正したばかりなのに）
+StreamServerライブラリが削除されている.....
+<img width="1712" alt="スクリーンショット 2024-11-27 10 26 57" src="https://github.com/user-attachments/assets/a3d012a1-8871-4a4d-855f-9d5e0ae87cf9">
+
 
 
 ## ベンチマーク
