@@ -198,3 +198,20 @@ stop apachectl stop command
          'sudo apachectl stop'
 
 ```
+
+
+## 考察
+各処理系のバージョンを明記しておいて他の方が同じ条件で追試を行うことが重要かと思った。
+
+abだと遅いので、他のベンチマークツールがあると教えていただきたいです。
+
+そもそもベンチマークまとめたリポジトリとかってあるのかな...
+
+自分が知る限りはShell自作するとかしてやりたいところ
+
+試したいリスト
+https://github.com/codesenberg/bombardier
+
+bunもやってみるといいのかもしれない
+Denoも'Deno.serve'を使うと速いかなと思ったりして。
+
