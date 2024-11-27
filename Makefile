@@ -29,16 +29,16 @@ run-deno:
 
 
 bench-go:
-	ab -k -c 10 -n 10000 http://127.0.0.1:3000/ > bench/go.txt
+	ab -k -c 10 -n 1000 http://127.0.0.1:3000/ > bench/go.txt
 
 bench-rust:
-	ab -k -c 10 -n 10000 http://127.0.0.1:3000/ > bench/rust.txt
+	ab -k -c 10 -n 1000 http://127.0.0.1:3000/ > bench/rust.txt
 
 bench-deno:
-	ab -k -c 10 -n 10000 http://127.0.0.1:3000/ > bench/deno.txt
+	ab -k -c 10 -n 1000 http://127.0.0.1:3000/ > bench/deno.txt
 
 bench-zig:
-	ab -k -c 10 -n 10000 http://127.0.0.1:3000/ > bench/zig.txt
+	ab -k -c 10 -n 1000 http://127.0.0.1:3000/ > bench/zig.txt
 
 check-port:
 	echo 'sudo lsof -i :3000'
@@ -50,4 +50,4 @@ clone-abe:
     --no-parent http://abehiroshi.la.coocan.jp
 
 abench:
-	ab -k -c 10 -n 10000 http://127.0.0.1:3000/
+	ab -k -c 10 -n 1000 http://127.0.0.1:3000/
