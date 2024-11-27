@@ -168,4 +168,8 @@ bench-zig:
 
 check-port:
 	echo 'sudo lsof -i :3000'
+
+stop apachectl stop command
+         'sudo apachectl stop'
+
 ```
