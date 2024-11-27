@@ -215,3 +215,8 @@ https://github.com/codesenberg/bombardier
 bunもやってみるといいのかもしれない
 Denoも'Deno.serve'を使うと速いかなと思ったりして。
 
+
+###### 雑談 
+
+Rust の場合ですが、そもそも TCPListener でのシングルスレッド処理なので遅いのは仕方ないのかなという気持ちです。非同期処理したいなら、パッケージ入れるしかないかなと...
+
